@@ -1,0 +1,1 @@
+web: gunicorn climateinfo.wsgi --log-file -

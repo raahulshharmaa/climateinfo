@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h3 style="text-align: center;">{{address}}</h3>
+<div class='data'>
+    {% if current %}
+        <h3>Daily Forecast</h3>
+        <div class='currentdata'>
+            <div><strong>Today {{current.time}}</strong></div>
+            <div><strong style="font-size: 150%;">{{current.temp}} &#8451;</strong></div>
+            <div style="text-align: center;"><img src="http://openweathermap.org/img/w/{{current.icon}}.png" alt=''></div>
+            <div style="text-align: center;">{{current.description}}</div><br>
+            <div>
+                <table>
+                    <tr><td>Pressure </td><td> {{current.pressure}} hPa</td></tr>
+                    <tr><td>Humidity </td><td> {{current.humidity}} %</td></tr>
+                    <tr><td>Sunrise </td><td> {{current.sunrise}}</td></tr>
+                    <tr><td>Sunset </td><td> {{current.sunset}}</td></tr>
+                    <tr><td>Clouds </td><td> {{current.clouds}} %</td></tr>
+                    <tr><td>Wind Speed </td><td> {{current.wind_speed}} m/s</td></tr>
+                </table>
+            </div>
+        </div>
+        {% for d in daily %}
+            <div class='dailydata'>
+                <div><strong>{{d.weekday}}</strong></div>
+                <div><strong style="font-size: 150%;">{{d.max_temp}} &#8451;/</strong> {{d.min_temp}} &#8451;</div>
+                <div style="text-align: center;"><img src="http://openweathermap.org/img/w/{{d.icon}}.png" alt=''></div>
+                <div style="text-align: center;">{{d.description}}</div><br>
+                <div>
+                    <table>
+                        <tr><td>Pressure </td><td> {{d.pressure}} hPa</td></tr>
+                        <tr><td>Humidity </td><td> {{d.humidity}} %</td></tr>
+                        <tr><td>Sunrise </td><td> {{d.sunrise}}</td></tr>
+                        <tr><td>Sunset </td><td> {{d.sunset}}</td></tr>
+                        <tr><td>Clouds </td><td> {{d.clouds}} %</td></tr>
+                        <tr><td>Wind Speed </td><td> {{d.wind_speed}} m/s</td></tr>
+                    </table>
+                </div>
+            </div>
+        {% endfor %}
+        <h3>Hourly Forecast</h3>
+        {{ graph|safe }}
+    {% endif %}
+</div>
+{% endblock %}

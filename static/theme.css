@@ -1,0 +1,70 @@
+body{
+    background-color: lightgray;
+}
+ul.top
+{
+    list-style-type: none;
+    margin: 0%;
+}
+ul.top > li
+{
+    display: inline-block;
+    margin: 0% 1%;
+}
+a, a:hover, a:visited, a:active
+{
+    color: blue;
+    text-decoration: none;
+}
+div.content
+{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 80%;
+}
+form
+{
+    text-align: center;
+}
+input
+{
+    display: inline-block;
+    width: 25%;
+    margin: 1% 0%;
+    padding: 0.5% 1%;
+    font-size: 105%;
+}
+button
+{
+    color: white;
+    background-color: green;
+    margin: 1% 0%;
+    font-size: 105%;
+    padding: 0.6% 1%;
+    border: none;
+}
+button:hover
+{
+    background-color: blue;
+    cursor: pointer;
+}
+/* Data Display */
+div.data, div.currentdata div, div.dailydata div
+{
+    display: block;
+}
+div.currentdata, div.dailydata
+{
+    display: inline-block;
+    margin:1% 0.5%;
+    border: 1px solid black;
+    border-radius: 2%;
+}
+div.currentdata
+{
+    padding: 2% 1%;
+}
+div.dailydata
+{
+    padding: 1% 0.5%;
+}
