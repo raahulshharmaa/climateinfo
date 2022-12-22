@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
-from decouple import config
-API = config('API')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +25,7 @@ SECRET_KEY = 'django-insecure-)ruegge1oha+@hp68461ib3#m(3+lgv=hq%vcgwi1r-1sy)g7e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','climateinfo.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','rahul2.pythonanywhere.com']
 
 
 # Application definition

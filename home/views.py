@@ -4,8 +4,8 @@ from datetime import datetime
 import requests
 import io
 import pytz
-from django.conf import settings
-APIKEY = settings.API
+
+APIKEY = "e3338b7f725119db74e8b5e8894544ad"
 def getData(lat,lon):
     response = requests.get("https://api.openweathermap.org/data/2.5/onecall?lat=" + str(lat) + "&lon=" + str(lon) + "&exclude=minutely&appid=" + APIKEY).json()
     data = {}
